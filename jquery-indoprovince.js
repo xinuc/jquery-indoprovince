@@ -29,7 +29,8 @@
     "Kalimantan Barat":["Bengkayang","Kapuas Hulu","Kayong Utara","Ketapang","Kubu Raya","Landak","Melawi","Pontianak","Kab. Pontianak","Sambas","Sanggau","Sekadau","Singkawang","Sintang"],
     "Kalimantan Selatan":["Balangan","Banjar","Banjarbaru","Banjarmasin","Barito Kuala","Hulu Sungai Selatan","Hulu Sungai Tengah","Hulu Sungai Utara","Kotabaru","Tabalong","Tanah Bumbu","Tanah Laut","Tapin"],
     "Kalimantan Tengah":["Barito Selatan","Barito Timur","Barito Utara","Gunung Mas","Kapuas","Katingan","Kotawaringin Barat","Kotawaringin Timur","Lamandau","Murung Raya","Palangka Raya","Pulang Pisau","Seruyan","Sukamara"],
-    "Kalimantan Timur":["Balikpapan","Berau","Bontang","Bulungan","Kutai Barat","Kutai Kartanegara","Kutai Timur","Malinau","Nunukan","Paser","Penajam Paser Utara","Samarinda","Tana Tidung","Tarakan"],
+    "Kalimantan Timur":["Balikpapan","Berau","Bontang","Kutai Barat","Kutai Kartanegara","Kutai Timur","Paser","Penajam Paser Utara","Samarinda"],
+    "Kalimantan Utara":["Bulungan","Malinau","Nunukan","Tana Tidung","Tarakan"],
     "Kepulauan Bangka Belitung":["Bangka","Bangka Barat","Bangka Selatan","Bangka Tengah","Belitung","Belitung Timur","Pangkal Pinang"],
     "Kepulauan Riau":["Batam","Bintan","Karimun","Kepulauan Anambas","Lingga","Natuna","Tanjung Pinang"],
     "Lampung":["Bandar Lampung","Lampung Barat","Lampung Selatan","Lampung Tengah","Lampung Timur","Lampung Utara","Mesuji","Metro","Pesawaran","Pringsewu","Tanggamus","Tulang Bawang","Tulang Bawang Barat","Way Kanan"],
@@ -63,11 +64,11 @@
     this.html(createOptions(cities, true));
     return this;
   }
-  
+
   $.fn.withCitySelect = function(city){
     var self = this;
     this.bind("change", function(){
-      $(city).html(createOptions(cities[self.find("option:selected").attr("value")] || [], false));  
+      $(city).html(createOptions(cities[self.find("option:selected").attr("value")] || [], false));
     });
     return this;
   }
