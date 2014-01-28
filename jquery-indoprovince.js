@@ -61,7 +61,6 @@
   }
 
   $.fn.indoProvinceSelect = function(){
-    this.html(createOptions(cities, true));
     return this;
   }
 
